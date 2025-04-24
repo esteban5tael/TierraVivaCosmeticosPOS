@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title><?php echo e(config('app.name', 'Laravel')); ?></title>
 
     <!-- General CSS Files -->
-    <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/modules/bootstrap/css/bootstrap.min.css')); ?>">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/components.css')); ?>">
     <style>
         .fondo {
             background-image: url('./img/fondo.jpg');
@@ -43,14 +43,15 @@
                     <div
                         class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                         <div class="login-brand">
-                            {{-- <img src="{{ asset('img/logo.png') }}" alt="logo" width="100"
-                                class="shadow-light rounded-circle"> --}}
+                            
                         </div>
 
-                        {{ $slot }}
+                        <?php echo e($slot); ?>
+
 
                         <div class="simple-footer">
-                            Copyright &copy; {{ date('Y') }}
+                            Copyright &copy; <?php echo e(date('Y')); ?>
+
                         </div>
                     </div>
                 </div>
@@ -59,19 +60,20 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="{{ asset('assets/modules/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/modules/popper.js') }}"></script>
-    <script src="{{ asset('assets/modules/tooltip.js') }}"></script>
-    <script src="{{ asset('assets/modules/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/modules/nicescroll/jquery.nicescroll.min.js') }}"></script>
-    <script src="{{ asset('assets/js/stisla.js') }}"></script>
+    <script src="<?php echo e(asset('assets/modules/jquery.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/modules/popper.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/modules/tooltip.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/modules/bootstrap/js/bootstrap.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/modules/nicescroll/jquery.nicescroll.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/stisla.js')); ?>"></script>
 
     <!-- JS Libraies -->
 
     <!-- Page Specific JS File -->
 
     <!-- Template JS File -->
-    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <script src="<?php echo e(asset('assets/js/scripts.js')); ?>"></script>
 </body>
 
 </html>
+<?php /**PATH C:\Users\User\Desktop\TierraVivaCosmeticosPOS\resources\views/layouts/guest.blade.php ENDPATH**/ ?>
