@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://tvcpos.test'),
+    'url' => env('APP_URL', 'http://tierravivacosmeticospos.test/'),
 
     'asset_url' => env('ASSET_URL'),
 
